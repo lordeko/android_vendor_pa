@@ -27,6 +27,9 @@ endif
 ifeq (pa_hammerhead,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hammerhead.mk
 endif
+ifeq (pa_hlte,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_hlte.mk
+endif
 ifeq (pa_mako,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_mako.mk
 endif
