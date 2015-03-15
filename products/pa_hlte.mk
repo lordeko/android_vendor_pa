@@ -13,19 +13,19 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_manta,$(TARGET_PRODUCT))
+ifeq (pa_hlte,$(TARGET_PRODUCT))
 
 # Include ParanoidAndroid common configuration
 include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/samsung/manta/full_manta.mk)
+$(call inherit-product, device/samsung/hlte/full_hlte.mk)
 
-# Override AOSP build properties
-PRODUCT_NAME := pa_manta
-PRODUCT_BRAND := google
-PRODUCT_MODEL := Nexus 10
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=mantaray BUILD_FINGERPRINT="google/mantaray/manta:5.0.2/LRX22G/1649326:user/release-keys" PRIVATE_BUILD_DESC="mantaray-user 5.0.2 LRX22G 1649326 release-keys"
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := pa_hlte
+PRODUCT_DEVICE := hlte
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := hlte
 
 endif
